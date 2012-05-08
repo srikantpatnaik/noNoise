@@ -32,7 +32,7 @@ Usage
                     
                         (OR)
 
-   $ python noNoise.py VideoWithNoise.ogv  CleanVideo.ogv     0.21                      
+   $ python noNoise.py VideoWithNoise.ogv  CleanVideo.ogv     0.21
                          (source file)     (destination file) (noise factor)  
 
    The third argument is optional(Noise factor). The scale spans from 
