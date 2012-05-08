@@ -23,8 +23,11 @@ Required packages
 
  5. Linux machine with default python 
 
+
+
 Usage
 -----
+
  1. Remove noise from a single file
     -------------------------------
    $ python noNoise.py VideoWithNoise.ogv  CleanVideo.ogv
@@ -58,6 +61,7 @@ NOTE: Please don't use any '/' after directory name. It will spit error.
 The fix is possible, but I don't want to spend time on it. This script is dirty
 but useful(atleast for me). When I find time, I will surely modify it. Meanwhile
 you all are welcome to add modifications.
+
 
 
 Working:
