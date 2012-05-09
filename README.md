@@ -28,7 +28,7 @@ Required packages
 Usage
 -----
 
- 1. Remove noise from a single file
+### Remove noise from a single file
 
     
       $ python noNoise.py VideoWithNoise.ogv  CleanVideo.ogv
@@ -48,7 +48,7 @@ Usage
    
 
 
- 2. Remove noise from all files inside a directory
+### Remove noise from all files inside a directory
 
       
       $ python noNoise.py allNoisyFiles  allCleanFiles
@@ -85,10 +85,10 @@ Working:
         ffmpeg -i 1.ogv -sameq 2.wav
    
    Extracting audio in wav format for fast & easy editing.The size of the
-   'wav' audio file will be approximately 8 times larger than the original.
+   `wav` audio file will be approximately 8 times larger than the original.
 
 
-   3. 
+   3.
         
         sox 2.wav -t null /dev/null trim 0 0.5 noiseprof myprofile
    
@@ -121,7 +121,7 @@ Working:
        ffmpeg2theora vid.wmv -o vid.ogv
 
    Now converting wmv into our favorite ogv format. This will create a 
-   'vid.ogv' of almost same size that of original video.
+   `vid.ogv` of almost same size that of original video.
 
 
 License
