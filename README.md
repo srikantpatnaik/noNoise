@@ -68,7 +68,7 @@ you all are welcome to add modifications.
 
 Working:
 -------
-   1.
+###1. Extracting video in less compressed format
 
         ffmpeg -i 1.ogv -sameq -an 2.wmv 
    
@@ -80,7 +80,7 @@ Working:
    original 'ogv' video.
    
 
-   2.
+###2. Extracting audio in less compressed format
    
         ffmpeg -i 1.ogv -sameq 2.wav
    
@@ -88,7 +88,7 @@ Working:
    `wav` audio file will be approximately 8 times larger than the original.
 
 
-   3.
+###3. Getting noise profile
         
         sox 2.wav -t null /dev/null trim 0 0.5 noiseprof myprofile
    
@@ -97,8 +97,7 @@ Working:
    standard noise is evenly distributed throughout the recording(eg: 
    fan, PC etc), so the default 0 to 0.5 value will do the trick.
 
-
-   4. 
+###4. Converting audio according to noise profile
     
        sox 2.wav 2-noisefree.wav noisered myprofile 0.26
 
@@ -109,14 +108,14 @@ Working:
    one for noise removal.
 
    
-   5. 
+###5. Combining back audio and video
    
        ffmpeg -i 2-noisefree.wav -i 2.wmv -sameq vid.wmv
 
    Merging new noiseless audio and old video together.
 
 
-   6. 
+###6. Final conversion
        
        ffmpeg2theora vid.wmv -o vid.ogv
 
