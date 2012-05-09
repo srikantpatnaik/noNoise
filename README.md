@@ -6,8 +6,8 @@ Audacity.
 To use any GUI based tool, we need to extract audio manually and then feed it to the software, once done we have to again join the noisefree
 audio with the video. This is OK with 1 or 2 files. But to for automating each step and to handle multiple files we need a simple script.
 
-One can simply use 'sox' and 'ffmpeg' commands shown below in given order to get the same result(see 'Working').
-The script is for 'garfields' like me. 
+One can simply use `sox` and `ffmpeg` commands shown below in given order to get the same result(see `Working`).
+
 
 
 Required packages
@@ -34,7 +34,7 @@ Usage
       $ python noNoise.py VideoWithNoise.ogv  CleanVideo.ogv
                             (source file)     (destination file)
                     
-                        (OR)
+(OR)
 
       $ python noNoise.py VideoWithNoise.ogv  CleanVideo.ogv     0.21
                             (source file)     (destination file) (noise factor)  
@@ -54,7 +54,7 @@ Usage
       $ python noNoise.py allNoisyFiles  allCleanFiles
                             (source dir)  (destination dir)
 
-                        (OR)
+(OR)
                         
       $ python noNoise.py allNoisyFiles  allCleanFiles      0.21
                           (source Dir)   (destination dir) (Noise factor)
