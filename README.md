@@ -13,22 +13,22 @@ The script is for 'garfields' like me.
 Required packages
 -----------------
 
- 1. sox
+ *  sox
 
- #. ffmpeg
+ * ffmpeg
 
- #. ffmpeg2theora
+ * ffmpeg2theora
 
- #. libmp3lame0
+ * libmp3lame0
 
- #. Linux machine with default python 
+ * Linux machine with default python 
 
 
 
 Usage
 -----
 
- ### Remove noise from a single file
+ 1. Remove noise from a single file
 
     
       $ python noNoise.py VideoWithNoise.ogv  CleanVideo.ogv
@@ -48,7 +48,7 @@ Usage
    
 
 
- ### Remove noise from all files inside a directory
+ 2. Remove noise from all files inside a directory
 
       
       $ python noNoise.py allNoisyFiles  allCleanFiles
@@ -68,8 +68,9 @@ you all are welcome to add modifications.
 
 Working:
 -------
+   1.
 
- #. ffmpeg -i 1.ogv -sameq -an 2.wmv 
+        ffmpeg -i 1.ogv -sameq -an 2.wmv 
    
    Extracting video in wmv format for easy editing(less compressed
    than mp4,ogv,avi). We can leave the video intact and combine the
@@ -79,13 +80,17 @@ Working:
    original 'ogv' video.
    
 
- #. ffmpeg -i 1.ogv -sameq 2.wav
+   2.
+   
+        ffmpeg -i 1.ogv -sameq 2.wav
    
    Extracting audio in wav format for fast & easy editing.The size of the
    'wav' audio file will be approximately 8 times larger than the original.
 
 
- #. sox 2.wav -t null /dev/null trim 0 0.5 noiseprof myprofile
+   3. 
+        
+        sox 2.wav -t null /dev/null trim 0 0.5 noiseprof myprofile
    
    Creating a noise profile of original audio at 0 to 0.5 second.
    One can change this duration if required. In most cases the
@@ -93,7 +98,9 @@ Working:
    fan, PC etc), so the default 0 to 0.5 value will do the trick.
 
 
- #. sox 2.wav 2-noisefree.wav noisered myprofile 0.26
+   4. 
+    
+       sox 2.wav 2-noisefree.wav noisered myprofile 0.26
 
    Creating a noisefree audio based on our noise profile. The value 
    `0.26` is important. This is scale for noise removal. 0 means no removal
@@ -102,12 +109,16 @@ Working:
    one for noise removal.
 
    
- 5. ffmpeg -i 2-noisefree.wav -i 2.wmv -sameq vid.wmv
+   5. 
+   
+       ffmpeg -i 2-noisefree.wav -i 2.wmv -sameq vid.wmv
 
    Merging new noiseless audio and old video together.
 
 
- 6. ffmpeg2theora vid.wmv
+   6. 
+       
+       ffmpeg2theora vid.wmv -o vid.ogv
 
    Now converting wmv into our favorite ogv format. This will create a 
    'vid.ogv' of almost same size that of original video.
