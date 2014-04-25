@@ -1,5 +1,6 @@
 Introduction
 ============
+
 With home made videos or screencasts, we often find a constant noise in our recording due to electric wiring, fan, choke coil of fluorescent
 lamp etc. This could be  irritating.But fortunately, these noises can be easily detected and can be removed with GUI based tools, such as 
 Audacity.
@@ -9,9 +10,33 @@ audio with the video. This is OK with 1 or 2 files. But to for automating each s
 One can simply use `sox` and `ffmpeg` commands shown below in given order to get the same result(see `Working`).
 
 
+UPDATE for 14.04
+----------------
 
-Required packages
------------------
+Install `libav-tools` and `sox`.
+
+Run as ::
+
+	$ bash noNoise.sh noisyVideo.mp4 noise-reduction-factor
+
+This will create an backup file of original video at `/tmp` 
+and noisefreeVideo in `pwd`.
+
+Example ::
+
+	$ bash noNoise.sh Kazam_screencast_00000.mp4 0.2
+
+This will create `noisefree_Kazam_screencast_00000.mp4.mp4` in `pwd`
+and a backup of original video at `/tmp/orig_Kazam_screencast_00000.mp4`
+
+This is just an early fix, will add more features soon. 
+
+Please raise issues for any bugs or feature requests. 
+
+
+
+Required packages (Upto Ubuntu 13.10)
+-------------------------------------
 
  *  sox
 
