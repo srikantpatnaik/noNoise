@@ -33,7 +33,14 @@ This is just an early fix, will add more features soon.
 
 Please raise issues for any bugs or feature requests. 
 
+Also, I recently came across `Kazam` package (available in repositories),
+its a good screen recorder with most needed keyboard shortcuts, such as
 
+* start recording: Super + Control + r
+* pause recording: Super + Control + p
+* finish recording: Super + Control + f
+* show Kazam: Super + Control + s
+* quit: Super + Control + q
 
 Required packages (Upto Ubuntu 13.10)
 -------------------------------------
