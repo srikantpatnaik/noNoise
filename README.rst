@@ -13,27 +13,27 @@ One can simply use `sox` and `ffmpeg` commands shown below in given order to get
 UPDATE for 14.04
 ----------------
 
-Install *libav-tools* and *sox*.
+Install **libav-tools** and **sox**.
 
 Run as ::
 
 	$ bash noNoise.sh noisyVideo.mp4 noise-reduction-factor
 
-This will create an backup file of original video in */tmp*
-and noisefreeVideo in *pwd*.
+This will create an backup file of original video in **/tmp**
+and noisefreeVideo in **pwd**.
 
 Example ::
 
 	$ bash noNoise.sh Kazam_screencast_00000.mp4 0.2
 
-It will create *noisefree_Kazam_screencast_00000.mp4.mp4* in *pwd*
-and a backup of original video in */tmp/orig_Kazam_screencast_00000.mp4*
+It will create **noisefree_Kazam_screencast_00000.mp4.mp4** in **pwd**
+and a backup of original video in **/tmp/orig_Kazam_screencast_00000.mp4**
 
 This is just an early fix, will add more features soon. 
 
 Please raise issues for any bugs or email me for feature requests. 
 
-Also, I recently came across `Kazam` package (available in repositories),
+Also, I recently came across **Kazam** package (available in repositories),
 its a good screen recorder with most needed keyboard shortcuts, such as
 
 * start recording: Super + Control + r
